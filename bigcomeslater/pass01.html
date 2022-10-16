@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>回望过去</title>
+     <link rel="shortcut icon" href="favicon.ico" />
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+     <style>
+          body {
+               margin: 0;
+               padding: 0;
+          }
+
+          h1 {
+               color: #fffdfd;
+               text-transform: uppercase;
+               font-weight: 100;
+               opacity: 0.75;
+               letter-spacing: 15px;
+               font-size: 5rem;
+               mix-blend-mode: screen;
+               font-family: "Dela Gothic One", cursive;
+          }
+
+          h2 {
+               font-family: "Dela Gothic One", cursive;
+               letter-spacing: 3px;
+               /* max-width: 40%; */
+          }
+
+          p {
+               font-family: "Lato", Arial, Helvetica;
+               letter-spacing: 2px;
+               font-size: 16px;
+               max-width: 70%;
+          }
+
+          ::-webkit-scrollbar {
+               display: none;
+          }
+
+          .outer-wrap {
+               width: 100vh;
+               height: 100vw;
+               transform: rotate(-90deg) translateX(-100vh);
+               transform-origin: top left;
+               overflow-y: scroll;
+               overflow-x: hidden;
+               position: absolute;
+               scrollbar-width: none;
+               -ms-overflow-style: none;
+          }
+
+          .page-wrap {
+               display: flex;
+               flex-direction: row;
+               width: 175vw;
+               transform: rotate(90deg) translateY(-100vh);
+               transform-origin: top left;
+          }
+
+          .page-header {
+               width: 150vw;
+               height: 100vh;
+               display: flex;
+               flex-direction: row;
+               align-items: center;
+               justify-content: center;
+               background-image: url("img/pass011.jpg");
+               background-size: cover;
+               background-position: 0% 75%;
+          }
+
+          .page-main {
+               width: 100vw;
+               height: calc(100vh - 25px);
+               overflow-y: auto;
+               margin: 0 auto;
+               padding: 25px;
+               background-color: #ededed;
+          }
+
+          article {
+               width: 90%;
+               margin: 0 auto;
+          }
+
+          article img {
+               width: 80%;
+          }
+
+          article p {
+               text-indent: 2em;
+          }
+
+          @media screen and (max-width: 768px) {
+               h1 {
+                    font-size: 33px;
+                    text-align: center;
+               }
+
+               .outer-wrap {
+                    width: 100vw;
+                    height: 100vh;
+                    transform: rotate(0deg) translateX(0vh);
+               }
+
+               .page-header {
+                    width: 100vw;
+               }
+
+               .page-wrap {
+                    width: 100vw;
+                    display: block;
+                    transform: rotate(0deg) translateY(0vh);
+               }
+
+               .page-main {
+                    width: 100%;
+                    height: 100%;
+                    padding: 0px;
+               }
+
+               article {
+                    width: 100%;
+                    padding: 25px;
+               }
+          }
+
+          @import url("https://fonts.googleapis.com/css?family=Mukta:700");
+
+
+          #button-container {
+               position: fixed;
+               top: 10px;
+               left: 10px;
+               z-index: 99;
+               font-family: "Mukta", sans-serif;
+               font-size: 1rem;
+               line-height: 1.5;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               margin: 0;
+               background: transparent;
+          }
+
+
+          #button-container button {
+               position: relative;
+               display: inline-block;
+               cursor: pointer;
+               outline: none;
+               border: 0;
+               vertical-align: middle;
+               text-decoration: none;
+               background: transparent;
+               padding: 0;
+               font-size: inherit;
+               font-family: inherit;
+          }
+
+          #button-container button.learn-more {
+               width: 12rem;
+               height: auto;
+          }
+
+          #button-container button.learn-more .circle {
+               transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+               position: relative;
+               display: block;
+               margin: 0;
+               width: 3rem;
+               height: 3rem;
+               background: #282936;
+               border-radius: 1.625rem;
+          }
+
+          #button-container button.learn-more .circle .icon {
+               transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+               position: absolute;
+               top: 0;
+               bottom: 0;
+               margin: auto;
+               background: #fff;
+          }
+
+          #button-container button.learn-more .circle .icon.arrow {
+               transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+               left: 0.625rem;
+               width: 1.125rem;
+               height: 0.125rem;
+               background: none;
+          }
+
+          #button-container button.learn-more .circle .icon.arrow::before {
+               position: absolute;
+               content: "";
+               top: -0.25rem;
+               right: 0.0625rem;
+               width: 0.625rem;
+               height: 0.625rem;
+               border-top: 0.125rem solid #fff;
+               border-right: 0.125rem solid #fff;
+               transform: rotate(45deg);
+          }
+
+          #button-container button.learn-more .button-text {
+               transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+               position: absolute;
+               top: 0;
+               left: 0;
+               right: 0;
+               bottom: 0;
+               padding: 0.75rem 0;
+               margin: 0 0 0 1.85rem;
+               color: #282936;
+               font-weight: 700;
+               line-height: 1.6;
+               text-align: center;
+               text-transform: uppercase;
+          }
+
+          #button-container button:hover .circle {
+               width: 100%;
+          }
+
+          #button-container button:hover .circle .icon.arrow {
+               background: #fff;
+               transform: translate(1rem, 0);
+          }
+
+          #button-container button:hover .button-text {
+               color: #fff;
+          }
+     </style>
+</head>
+
+<body>
+     <div id="button-container">
+          <button class="learn-more" type="button">
+               <span class="circle" aria-hidden="true">
+                    <span class="icon arrow"></span>
+               </span>
+               <span class="button-text">Go Back</span>
+          </button>
+     </div>
+     <div class="outer-wrap">
+          <div class="page-wrap">
+               <header class="page-header">
+                    <h1>Recall The Past</h1>
+               </header>
+               <div class="page-main">
+                    <article>
+                         <p>在岁月的长河里，我们每一个人的年轮都这样静静地流淌，消逝。看似日复一日没有变化，
+                              然而当你亲历了一个生命从你的生命里消失，你就会渐渐的开始思考，生命是什么？尤其是一个你
+                              至亲至爱的人离开了你。或许，你会伤心难过，或许你会学着长大，学着去珍惜，珍惜每一个眼前的人
+                              ，哪怕是一个陌生人。随着时间的流逝，岁月教会我们最多的，或许就是珍惜。</p>
+                         <img src="img/pass012.jpg">
+
+                         <p>走到生命的哪一个阶段，都该喜欢那一段时光，完成那一阶段该完成的职责，顺生而行，
+                              不沉迷过去，不狂热地期待着未来，生命这样就好。不管正经历着怎样的挣扎与挑战，
+                              或许我们都只有一个选择：虽然痛苦，却依然要快乐，并相信未来。</p>
+                         <img src="img/pass013.jpg">
+
+                         <p>今天的我永远都比明天的我年轻，昨天的我永远都比前天的我大胆热情，过去的每一天，
+                              我都用过我的真心、我的热情、我的胆量去对待我想认真对待的人。过去的每一天都不可惜，
+                              可是可惜的是，或许明天的我不会再像今天和昨天一样了。</p>
+                         <img src="img/pass014.jpg">
+
+                         <p>
+                              呐，你是否曾经站在你以前与伙伴一起玩的地方，站在那，任清风吹拂，
+                              面前浮现着童年的场景，淡淡的笑，想要去触摸，可又无力。如果可以，
+                              你回到过去，在你曾经最厌恶的教室，看着曾经的老师的在讲台上讲课，
+                              你是否又会流泪。那熟悉的下课铃的下课铃，令人怀念的课桌，桌上散乱的
+                              笔、书，曾经的同学，如你脑海里的一样，互相打闹，追逐，开玩笑，你又
+                              会怎样?
+
+                         </p>
+                         <p>
+                              不过可惜，没有如果。曾经的天真不会回来，当年的书早已丢失，那课桌也许还在，
+                              却不知道哪张是你的，学校还在，却已没有那一个个熟悉的身影，曾经不会变成现在，逝去的不会回来......
+                              呵，也许吧。
+                              毕业之前拍着照片，那照片上一个个笑脸，也许照片早已泛黄，也许一直藏在你房
+                              间的最深处，你不敢拿起，怕会哭，可这样又有什么用呢?那笑容早已印在你脑海
+                              里最深处，你只是不敢回忆罢了。那学校里的大树下，是否有你们曾经的脚印，
+                              曾经许下的诺言......
+                              有吗?怎么不记得了? 呵，也许有吧。
+                         </p>
+                         <p>
+                              你怀念过去吗?幼稚的言语，歪歪扭扭的字体，作业本上的红叉，你怀念吗?曾经
+                              小拇指的勾勾，“拉钩上吊一百年不许骗，骗人是小猪”你有过吗?你还记得吗?也
+                              许记得，也许忘了吧。也许你有一个最好的朋友，也许以前是无话不谈的好朋
+                              友，以前的以后，就互相看不顺眼，互相躲着对方，可，这是为什么?
+                              你的过去幸福吗?快乐吗?你怀念吗?很多记忆值得怀念，很多记忆都很快乐，
+                              可为什么，我们要把它锁起来?剩下些不好的，拿来回忆呢。也许你没有，也许
+                              你一直都很幸福，但这又怎么可能呢?有痛苦，有悲伤，有喜怒，有哀乐，有快
+                              乐，有欢笑，有平坦，有曲折，这，才能称之为人生。
+                         </p>
+                         <p>
+
+
+                              我们时常会怀念过去，因为单纯，因为快乐。即使泪流满面，嘴角也依旧掀起......
+                              你说，对不对?
+                         </p>
+                         <img src="img/pass015.jpg">
+                    </article>
+               </div>
+               <footer class="page-footer">
+
+               </footer>
+          </div>
+     </div>
+</body>
+<script>
+     const goBack = document.querySelector('#button-container');
+     goBack.onclick = () => {
+          window.location.href = "nav.html";
+     }
+</script>
+
+</html>

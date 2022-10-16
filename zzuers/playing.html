@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/playing.css">
+    <title>玩在郑大</title>
+</head>
+
+<body>
+    <div>
+        <div class="header">
+            <div class="container">
+                <div class="logo"><a href="index.html"><img src="./images/logo.png" alt="Logo"></a></div>
+                <div class="menu">
+                    <ul class="nav" id="nav">
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="eating.html">吃在郑大</a></li>
+                        <li class="current"><a href="playing.html">玩在郑大</a></li>
+                        <li><a href="study.html">学在郑大</a></li>
+                        <li><a href="touring.html">游在郑大</a></li>
+                        <li><a href="living.html">住在郑大</a></li>
+                        <div class="clear"></div>
+                    </ul>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+        <div class="afterHeader"></div>
+    </div>
+    <div class="banner">
+        <section class="index-swiper-wrapper">
+            <!-- autoplay -->
+            <video class="video" id="video" loop autoplay muted controls disablepictureinpicture controlslist="nodownload nofullscreen noremoteplayback noplaybackrate" webkit-playsinline="true" x5-video-player-type="h5" x5-video-orientation="portraint" src="./images/视频.mp4"></video>
+            <script>
+              var flag = 0;
+              document.body.addEventListener('mousedown', function () {
+                if (flag > 0) return;
+                var video = $('.video')[0];
+                ++flag;
+                video.muted = false;
+              }, false);
+              $('.video').bind('contextmenu', function () { return false; });
+            </script>
+          </section>
+        <div class="banner-title">
+            <div class="container">
+                <div id="top" class="callbacks_container">
+                    <p>&emsp;&emsp;笃力向前，开启青春华彩篇章，志存高远，他日终成擎天栋梁。10月18日晚7点，郑州大学2020级新生开学典礼在主校区本源体育场隆重举行。校领导宋争辉、刘炯天、王宗敏、李兴成、谷振清、张倩红、许东升、关绍康、韩国河、刘章锁、赵明皞、董子钢，中国工程院院士、材料科学与工程学院、河南省资源与材料工业技术研究院院长何季麟，教育部党建与思想政治工作联络员戚世钧，郑州大学优质生源基地中学校长代表、校部机关主要负责同志、各院（系）主要负责同志，教师代表，2020级全体新生共同参加了活动。根据新冠肺炎疫情常态化防控要求，典礼采取线上与线下相结合的形式，主校区13100名2020级新生现场观礼，老校区和主校区校外住宿的6000余名新生云端观礼。校党委副书记、副校长王宗敏主持典礼。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-4 featur-grids">
+                    <div class="thumbnail feature-thmbnl">
+                        <h4>社团招新“百团大战”</h4>
+                        <img src="images/img7.jpg" alt="">
+                        <div class="caption">
+                            <p>社团的发展离不开新生力量的注入，社团招新工作为各社团在新的学年里输入了新的血液。为出色的完成社团招新，各社团纷纷亮出“十八般武艺”现场造势：气势浩大的彩虹门、制作精美的宣传条幅、风格独特的宣传材料，可谓“八仙过海，各显神通”。丰富多彩的社团展示深深吸引着过往的同学，带着对社团的好奇与向往，大家驻足询问，认真细致地选择自己感兴趣的社团踊跃加入。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 featur-grids">
+                    <div class="thumbnail feature-thmbnl">
+                        <h4>社团文化周末广场</h4>
+                        <img src="images/img8.jpg" alt="">
+                        <div class="caption">
+                            <p>社团文化周末广场是由校社团联合会携手全校学生社团周密策划、精心筹备、特別推出的大型品牌活动，每期的社团文化周末广场各学生社团都积极参与。曼妙的音乐、动感的舞蹈、悠扬的歌声交映生辉，琴棋书画、诗词歌赋、拓展运动、艺术表演为大家呈现出盛大的视听盛宴，武术协会的双截棍、太极拳、散打、剑术等现场表演技压群雄，现场动静结合，精彩纷呈，充分展示了郑大社团的良好风貌。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 featur-grids">
+                    <div class="thumbnail feature-thmbnl">
+                        <h4>元旦游园会</h4>
+                        <img src="images/img9.jpg" alt="">
+                        <div class="caption">
+                            <p>每年元旦，郑州大学社团联合会都会组织全校学生社团举办迎新年元旦游园会，为郑大新年祥和喜庆的画卷增添浓墨重彩的一笔。数千名师生来到现场猜灯谜、观看动漫电影、参与有奖知识竞答、欣赏武术模仿秀和民俗风情展示。各种知识性、趣味性十足的活动受到广大师生的一致好评。元旦游园会是全校社团的一次盛会，也展现出郑大独特的校园文化。</p>
+                           </div>
+                    </div>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

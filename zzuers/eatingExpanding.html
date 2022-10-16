@@ -1,0 +1,177 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>更多探索</title>
+	<link href="css/bootstrap2.css" rel="stylesheet" type="text/css" media="all">
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href='http://fonts.useso.com/css?family=Raleway:400,300,200,500,600,700,800,900' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/header.css">
+	<script src="js/jquery.min.js"></script>
+	<script type='text/javascript' src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/menu_jquery.js"></script>
+	<link rel="stylesheet" href="css/swipebox.css">
+	<!------ Light Box ------>
+	<script src="js/jquery.swipebox.min.js"></script> 
+	<script type="text/javascript">
+		jQuery(function($) {
+			$(".swipebox").swipebox();
+		});
+	</script>
+	<!------ Eng Light Box ------>
+	<script type="text/javascript" src="js/move-top.js"></script>
+		<script type="text/javascript" src="js/easing.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+				});
+			});
+		</script>
+		<script type="text/javascript">
+		$(document).ready(function() {
+				/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+				*/
+		$().UItoTop({ easingType: 'easeOutQuart' });
+	});
+	</script>
+</head>
+<body>
+    <div>
+		<div class="header">
+			<div class="container">
+				<div class="logo"><a href="index.html"><img src="./images/logo.png" alt="Logo"></a></div>
+				<div class="menu">
+					<ul class="nav" id="nav">
+						<li><a href="index.html">首页</a></li>
+						<li class="current"><a href="eating.html">吃在郑大</a></li>
+						<li><a href="playing.html">玩在郑大</a></li>
+						<li><a href="study.html">学在郑大</a></li>
+						<li><a href="touring.html">游在郑大</a></li>
+						<li><a href="living.html">住在郑大</a></li>
+						<div class="clear"></div>
+					</ul>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+		<div class="afterHeader"></div>
+	</div>
+	<!-- portfolio-section -->
+	 <div class="portfolio"  id="portfolio">
+		<div class="container">
+			<h2>美食·<span>荟萃</span></h2>
+			<i class="accent"></i>
+			<p>风华园的和孜然爆肉饭、洛师傅大盘鸡，秋穗园的黄焖鸡米饭、烤鱼饭、麻辣香锅，嵩阳餐厅的爆肚粉、豆花鱼、大盘鸡面</p>
+			<p>哇！馋得人直流口水呀！这么多美味的窗口，哪一天不是长长的队伍，想品尝到美味，还真是不容易呢！</p>
+		</div>
+			<ul id="filters" class="clearfix">
+				<li><span class="filter active" data-filter="app card icon logos web">全部美味</span></li>
+				<li><span class="filter" data-filter="app">风华园</span></li>
+				<li><span class="filter" data-filter="card">秋穗园</span></li>
+				<li><span class="filter" data-filter="icon">嵩阳餐厅</span></li>
+			</ul>
+				<div id="portfoliolist">
+					<div class="portfolio card mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="card" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper grid_box">		
+							 <a href="images/bc2.jpg" class="swipebox"  title="Image Title"> <img src="images/bc2.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
+		                </div>
+					</div>				
+					<div class="portfolio app mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="app" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper grid_box">		
+							 <a href="images/food.jpg" class="swipebox"  title="Image Title"> <img src="images/food.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
+		                </div>
+					</div>					
+					<div class="portfolio icon mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="icon" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper grid_box">		
+							 <a href="images/brand.jpg" class="swipebox"  title="Image Title"> <img src="images/brand.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
+		                </div>
+					</div>
+					<div class="portfolio app mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="app" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper grid_box">		
+							 <a href="images/pho.jpg" class="swipebox"  title="Image Title"> <img src="images/pho.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
+		                </div>
+					</div>			
+					<div class="portfolio card mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="card" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper grid_box">		
+							 <a href="images/sign.jpg" class="swipebox"  title="Image Title"> <img src="images/sign.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
+		                </div>
+					</div>	
+					<div class="portfolio card mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="card" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper grid_box">		
+							 <a href="images/bcard.jpg" class="swipebox"  title="Image Title"> <img src="images/bcard.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
+		                </div>
+					</div>	
+					<div class="portfolio icon mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="icon" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper grid_box">		
+							 <a href="images/pp.jpg" class="swipebox"  title="Image Title"> <img src="images/pp.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
+		                </div>
+						</div>
+						<div class="portfolio logos mix_all wow bounceIn" data-wow-delay="0.4s" data-cat="logos" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper grid_box">		
+							 <a href="images/diamond.jpg" class="swipebox"  title="Image Title"> <img src="images/diamond.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
+		                </div>
+					</div>
+					<div class="clearfix"></div>					
+				</div>
+					<div class="clearfix"></div>
+    </div>
+	  <!-- Script for gallery Here -->
+				<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+					<script type="text/javascript">
+					$(function () {
+						
+						var filterList = {
+						
+							init: function () {
+							
+								// MixItUp plugin
+								// http://mixitup.io
+								$('#portfoliolist').mixitup({
+									targetSelector: '.portfolio',
+									filterSelector: '.filter',
+									effects: ['fade'],
+									easing: 'snap',
+									// call the hover effect
+									onMixEnd: filterList.hoverEffect()
+								});				
+							
+							},
+							
+							hoverEffect: function () {
+							
+								// Simple parallax effect
+								$('#portfoliolist .portfolio').hover(
+									function () {
+										$(this).find('.label').stop().animate({bottom: 0}, 200, 'easeOutQuad');
+										$(this).find('img').stop().animate({top: -30}, 500, 'easeOutQuad');				
+									},
+									function () {
+										$(this).find('.label').stop().animate({bottom: -40}, 200, 'easeInQuad');
+										$(this).find('img').stop().animate({top: 0}, 300, 'easeOutQuad');								
+									}		
+								);				
+							
+							}
+				
+						};
+						
+						// Run the show!
+						filterList.init();
+						
+						
+					});	
+					</script>
+<!-- portfolio-section  -->
+
+</body>
+</html>

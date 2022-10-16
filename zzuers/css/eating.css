@@ -1,0 +1,106 @@
+html,body{
+	font-family: 'Open Sans', sans-serif;
+	background:#e2e2e2;
+}
+body a{
+    transition:0.5s all;
+	-webkit-transition:0.5s all;
+	-moz-transition:0.5s all;
+	-o-transition:0.5s all;
+	-ms-transition:0.5s all;
+}
+.putting {
+  background: url(../images/2.jpg) no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -ms-background-size: cover;
+  min-height: 308px;
+  height: 852px;
+  text-align: center;
+}
+.putting h2{
+  color: #ffffff;
+  font-size: 80px;
+  padding: 280px 0;
+  margin: 0;
+  line-height: 50px;
+}
+.putting h4 {
+  color: #ffffff;
+  font-size: 40px;
+  padding: 100px 0;
+  margin-top: -120px;
+  line-height: 50px;
+}
+.blog {
+  padding: 5em 0;
+  background:#a94442;
+  position:relative;
+}
+.blog h4 {
+  color: #000;
+  font-size: 1.6em;
+  font-weight: 700;
+  margin: 1em 0;
+  padding: 0em 3em;
+}
+.blog p {
+  color: #000;
+  font-size: 1.1em;
+  margin: 1em 0;
+  line-height: 1.6em;
+}
+.blog-top2 {
+  border: 2px solid #fff;
+  position: absolute;
+  top: 9em;
+  right: 16em;
+  width: 24.5%;
+  padding: 1em 1em;
+}
+.blog-top1 {
+  border: 2px solid #fff;
+  margin: 11em 26.9em;
+  width: 33.9%;
+  padding: 1em 1em;
+}
+.blog-top {
+  border: 2px solid #fff;
+  position: absolute;
+  top: 9em;
+  left: 16em;
+  width: 24.5%;
+  padding: 1em 1em;
+}
+.blog h3 {
+  color: #fff;
+  margin: 0;
+  font-size: 2em;
+  text-transform: uppercase;
+  background: #2c7be7;
+  padding: 1em ;
+  width: 30%;
+  margin: 0 0 0 30em;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.cre {
+  background: #dedede;
+  padding: 1em;
+}
+
+a{
+  color: #fff;
+  margin-bottom: 2em;
+  margin-right: 2em;
+  font-size: 2em;
+  float:right;
+}
+
+#nav a{
+  margin-right: 0px;
+}

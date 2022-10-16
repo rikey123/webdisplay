@@ -1,0 +1,75 @@
+
+.index-swiper-wrapper .video {
+    width: 100%;
+    height: 800px;
+    /* height: auto; */
+}
+
+.banner-title {
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+    margin: 0 auto;
+    background-color: rgba(95, 158, 160, 0.86);
+    padding: 2em 0px;
+}
+
+.features {
+    padding: 3em 0;
+}
+
+.featur-grids .thumbnail {
+    padding: 1.5em;
+    background-color: #F4F2F2;
+    border: none;
+}
+
+.feature-thmbnl .caption {
+    padding: 0 !important;
+}
+
+.feature-thmbnl h4 {
+    font-size: 1.6em;
+    margin-bottom: 0.3em;
+    font-weight: 400;
+}
+
+.feature-thmbnl img {
+    border: 10px solid rgb(242, 237, 237);
+    box-shadow: 1px 1px 1px rgb(192, 188, 188);
+    -webkit-box-shadow: 1px 1px 1px rgb(192, 188, 188);
+    -moz-box-shadow: 1px 1px 1px rgb(192, 188, 188);
+    -o-box-shadow: 1px 1px 1px rgb(192, 188, 188);
+    -ms-box-shadow: 1px 1px 1px rgb(192, 188, 188);
+}
+
+.feature-thmbnl h5 {
+    font-size: 1.3em;
+    color: rgb(95, 158, 160);
+    margin: 1em 0 0.3em;
+}
+
+.feature-thmbnl h5 a {
+    color: rgb(95, 158, 160);
+}
+
+.feature-thmbnl h5 a:hover {
+    color: rgba(242, 114, 66, 0.96);
+}
+
+.feature-thmbnl p {
+    font-size: 14px;
+    margin: 0.5em 0 1em;
+    color: #000;
+    font-weight: 300;
+}
+
+.features h3 {
+    font-size: 1.6em;
+    font-weight: 500;
+    font-style: italic;
+    color: #645d5d;
+    margin-bottom: 1em;
+    font-family: 'Playfair Display', serif;
+}

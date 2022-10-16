@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>志愿活动</title>
+     <link rel="shortcut icon" href="favicon.ico" />
+     <style>
+          @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500&family=DM+Sans:wght@400;500&display=swap");
+
+          :root {
+               --family-secondary: "DM Sans", sans-serif;
+               --family-primary: "Comfortaa", cursive;
+               --color-primary: #1d1e22;
+          }
+
+          * {
+               box-sizing: border-box;
+               font-family: var(--family-secondary);
+          }
+
+          h1,
+          h2,
+          h3,
+          h4,
+          h5,
+          h6 {
+               font-family: var(--family-primary);
+          }
+
+          h1,
+          h2,
+          h3,
+          h4,
+          h5,
+          h6,
+          p {
+               margin: 0;
+          }
+
+          html {
+               scroll-behavior: smooth;
+          }
+
+          body {
+               margin: 0;
+               padding: 0;
+               background-color: var(--color-primary);
+               position: relative;
+          }
+
+          header {
+               position: sticky;
+               top: 0;
+               display: flex;
+               width: 100%;
+               height: 100vh;
+               justify-content: center;
+               align-items: stretch;
+               color: white;
+
+               background-size: cover;
+               background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='700' preserveAspectRatio='none' viewBox='0 0 1440 700'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1006%26quot%3b)' fill='none'%3e%3cpath d='M45 700L745 0L1400.5 0L700.5 700z' fill='url(%23SvgjsLinearGradient1007)'%3e%3c/path%3e%3cpath d='M561.2 700L1261.2 0L1894.2 0L1194.2 700z' fill='url(%23SvgjsLinearGradient1007)'%3e%3c/path%3e%3cpath d='M1425 700L725 0L629 0L1329 700z' fill='url(%23SvgjsLinearGradient1008)'%3e%3c/path%3e%3cpath d='M957.8 700L257.79999999999995 0L115.29999999999995 0L815.3 700z' fill='url(%23SvgjsLinearGradient1008)'%3e%3c/path%3e%3cpath d='M769.3072512682479 700L1440 29.30725126824791L1440 700z' fill='url(%23SvgjsLinearGradient1007)'%3e%3c/path%3e%3cpath d='M0 700L670.6927487317521 700L 0 29.30725126824791z' fill='url(%23SvgjsLinearGradient1008)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1006'%3e%3crect width='1440' height='700' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='0%25' y1='100%25' x2='100%25' y2='0%25' id='SvgjsLinearGradient1007'%3e%3cstop stop-color='rgba(145%2c 147%2c 151%2c 0.2)' offset='0'%3e%3c/stop%3e%3cstop stop-opacity='0' stop-color='rgba(145%2c 147%2c 151%2c 0.2)' offset='0.66'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='100%25' y1='100%25' x2='0%25' y2='0%25' id='SvgjsLinearGradient1008'%3e%3cstop stop-color='rgba(145%2c 147%2c 151%2c 0.2)' offset='0'%3e%3c/stop%3e%3cstop stop-opacity='0' stop-color='rgba(145%2c 147%2c 151%2c 0.2)' offset='0.66'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
+          }
+
+
+
+          .img-card {
+               --image-width: 500px;
+               --image-ratio: 0.9;
+               --image-padding: 10%;
+               --image-shadow: 0px 22px 85px -32px #000000;
+               margin: auto;
+               position: absolute;
+               top: var(--image-padding);
+               left: 50%;
+               right: var(--image-padding);
+               bottom: var(--image-padding);
+               -webkit-box-shadow: var(--image-shadow);
+               box-shadow: var(--image-shadow);
+               opacity: 0;
+               animation: comeScale 0.2s 0.5s linear forwards;
+               width: var(--image-width);
+               height: calc(var(--image-width) / var(--image-ratio));
+          }
+
+          @media (max-width: 1079px) {
+               header h1 {
+                    --header-h1-font-size: 60px;
+               }
+
+               .img-card {
+                    --image-width: 400px;
+               }
+          }
+
+          @media (max-width: 970px) {
+               header h1 {
+                    --header-h1-font-size: 50px;
+               }
+
+               .img-card {
+                    --image-width: 350px;
+               }
+          }
+
+          @media (max-width: 870px) {
+               header h1 {
+                    --header-h1-font-size: 40px;
+               }
+
+               .img-card {
+                    --image-width: 250px;
+               }
+          }
+
+          @media (max-width: 580px) {
+               header h1 {
+                    --header-h1-font-size: 30px;
+               }
+
+               .img-card {
+                    --image-width: 200px;
+               }
+          }
+
+          @media (max-width: 450px) {
+               header h1 {
+                    --header-h1-font-size: 30px;
+               }
+
+               .img-card {
+                    --image-width: 150px;
+               }
+          }
+
+          .img-card::before,
+          .img-card::after {
+               content: "";
+               position: absolute;
+               top: 0;
+               right: 0;
+               left: 0;
+               bottom: 0;
+               z-index: -1;
+               background-color: rgba(1, 1, 1, 0.5);
+               transform-origin: bottom left;
+          }
+
+          .img-card::before {
+               animation: comeRotateBefore 0.2s 1.2s linear forwards;
+          }
+
+          .img-card::after {
+               animation: comeRotateAfter 0.2s 1.3s linear forwards;
+               z-index: -2;
+          }
+
+          .img-card>img {
+               width: 100%;
+               object-fit: cover;
+               height: 100%;
+               opacity: 0.95;
+               animation: comeOpacityy 0.5s 1s linear forwards;
+               opacity: 0;
+               transform: scale(1.2);
+          }
+
+          .page-title {
+               position: absolute;
+               z-index: 999;
+               color: white;
+               top: 0;
+               right: 0;
+               bottom: 0;
+               left: 0;
+               align-items: center;
+               justify-content: center;
+               display: flex;
+               opacity: 0;
+               transform: scale(1.2);
+               animation: comeTranslate 0.5s 1.05s linear forwards;
+          }
+
+          @keyframes comeTranslate {
+               0% {
+                    opacity: 0;
+                    transform: translateX(-50px);
+               }
+
+               100% {
+                    opacity: 1;
+                    transform: translateX(0px);
+               }
+          }
+
+          @keyframes comeScale {
+               0% {
+                    opacity: 0;
+                    transform: scale(0.5);
+               }
+
+               100% {
+                    opacity: 1;
+                    transform: scale(1);
+               }
+          }
+
+          @keyframes comeRotateBefore {
+               0% {
+                    transform: translateX(0px) translateY(0px) rotate(0deg);
+               }
+
+               100% {
+                    transform: translateX(5px) translateY(5px) rotate(2deg);
+               }
+          }
+
+          @keyframes comeRotateAfter {
+               0% {
+                    transform: translateX(0px) translateY(0px) rotate(0deg);
+               }
+
+               100% {
+                    transform: translateX(10px) translateY(10px) rotate(4deg);
+               }
+          }
+
+          @keyframes comeOpacityy {
+               0% {
+                    opacity: 0;
+                    transform: scale(1.2);
+               }
+
+               100% {
+                    opacity: 1;
+                    transform: scale(1);
+               }
+          }
+
+          @keyframes widthAnimation {
+               0% {
+                    width: 0%;
+               }
+
+               50% {
+                    width: 100%;
+               }
+
+               100% {
+                    width: 100%;
+               }
+          }
+
+          main {
+               --main-shadow: 0px -10px 100px -11px #000000;
+               position: relative;
+               z-index: 99;
+               background-color: white;
+               -webkit-box-shadow: var(--main-shadow);
+               box-shadow: var(--main-shadow);
+               color: var(--color-primary);
+          }
+
+          article {
+               --article-width: 800px;
+               width: var(--article-width);
+               margin: auto;
+          }
+
+          @media (max-width: 870px) {
+               article {
+                    --article-width: 80%;
+               }
+          }
+
+          article>h2 {
+               --h2-siize: 30px;
+               padding: 20px 0;
+               font-size: var(--h2-siize);
+          }
+
+          article>p {
+               --p-siize: 15px;
+               padding: 5px 0;
+               font-size: var(--p-siize);
+          }
+
+          article>img {
+               --img-shadow: 0px 23px 31px -23px #000000;
+               width: 100%;
+               object-fit: cover;
+               -webkit-box-shadow: var(--img-shadow);
+               box-shadow: var(--img-shadow);
+               margin-bottom: 10px;
+          }
+
+          @media (max-width: 870px) {
+               article>h2 {
+                    --h2-siize: 16px;
+               }
+
+               article>p {
+                    --p-siize: 13px;
+               }
+          }
+
+          @media (max-width: 630px) {
+               article>h2 {
+                    --h2-siize: 13px;
+               }
+
+               article>p {
+                    --p-siize: 12px;
+               }
+          }
+
+          #top {
+               outline: none;
+               cursor: pointer;
+               border: none;
+               font-size: var(--family-primary);
+          }
+
+          h2 {
+               padding-left: 20px !important;
+               position: relative;
+               color: #111;
+          }
+
+          span.h_decoration,
+          span.h_decoration::before,
+          span.h_decoration::after {
+               --span-size-w: 4px;
+               --span-size-h: 30px;
+               width: var(--span-size-w);
+               height: var(--span-size-h);
+               display: inline-block;
+               position: absolute;
+          }
+
+          span.h_decoration {
+               background-color: #49618d;
+               left: 0;
+               top: calc(50% - var(--span-size-h) / 2);
+          }
+
+          span.h_decoration::before {
+               content: "";
+               left: 6px;
+               background-color: #82a1d9;
+               transform: scaleY(0.7);
+          }
+
+          span.h_decoration::after {
+               content: "";
+               left: 12px;
+               background-color: #b2d9e5;
+               transform: scaleY(0.4);
+          }
+
+          main {
+               padding: 20px 0;
+          }
+
+          article p {
+               text-indent: 2em;
+               font-size: 16px;
+               line-height: 1.5;
+          }
+
+          .no {
+
+               text-indent: 0;
+               text-align: center;
+          }
+
+          @import url("https://fonts.googleapis.com/css?family=Mukta:700");
+
+
+          #button-container {
+               position: fixed;
+               top: 10px;
+               left: 10px;
+               z-index: 99;
+               font-family: "Mukta", sans-serif;
+               font-size: 1rem;
+               line-height: 1.5;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               margin: 0;
+               background: transparent;
+          }
+
+
+          #button-container button {
+               position: relative;
+               display: inline-block;
+               cursor: pointer;
+               outline: none;
+               border: 0;
+               vertical-align: middle;
+               text-decoration: none;
+               background: transparent;
+               padding: 0;
+               font-size: inherit;
+               font-family: inherit;
+          }
+
+          #button-container button.learn-more {
+               width: 12rem;
+               height: auto;
+          }
+
+          #button-container button.learn-more .circle {
+               transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+               position: relative;
+               display: block;
+               margin: 0;
+               width: 3rem;
+               height: 3rem;
+               background: #282936;
+               border-radius: 1.625rem;
+          }
+
+          #button-container button.learn-more .circle .icon {
+               transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+               position: absolute;
+               top: 0;
+               bottom: 0;
+               margin: auto;
+               background: #fff;
+          }
+
+          #button-container button.learn-more .circle .icon.arrow {
+               transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+               left: 0.625rem;
+               width: 1.125rem;
+               height: 0.125rem;
+               background: none;
+          }
+
+          #button-container button.learn-more .circle .icon.arrow::before {
+               position: absolute;
+               content: "";
+               top: -0.25rem;
+               right: 0.0625rem;
+               width: 0.625rem;
+               height: 0.625rem;
+               border-top: 0.125rem solid #fff;
+               border-right: 0.125rem solid #fff;
+               transform: rotate(45deg);
+          }
+
+          #button-container button.learn-more .button-text {
+               transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+               position: absolute;
+               top: 0;
+               left: 0;
+               right: 0;
+               bottom: 0;
+               padding: 0.75rem 0;
+               margin: 0 0 0 1.85rem;
+               color: #282936;
+               font-weight: 700;
+               line-height: 1.6;
+               text-align: center;
+               text-transform: uppercase;
+          }
+
+          #button-container button:hover .circle {
+               width: 100%;
+          }
+
+          #button-container button:hover .circle .icon.arrow {
+               background: #fff;
+               transform: translate(1rem, 0);
+          }
+
+          #button-container button:hover .button-text {
+               color: #fff;
+          }
+     </style>
+</head>
+
+<body>
+     <div id="button-container">
+          <button class="learn-more" type="button">
+               <span class="circle" aria-hidden="true">
+                    <span class="icon arrow"></span>
+               </span>
+               <span class="button-text">Go Back</span>
+          </button>
+     </div>
+     <div class="page-wrap">
+          
+          <header id="page-header" class="page-header">
+
+               <div class="img-card">
+                    <img src="img/v0.jpg">
+               </div>
+          </header>
+          <main class="page-main">
+               <article>
+                    <h2><span class="h_decoration"></span> “遇见郑大，豫见你”
+                    </h2>
+                    <p>这不仅仅是一次实践，还是一项挑战。从前期的准备工作，到最后的
+                         宣讲成功，我们克服了一个个困难，也更加明白了“纸上得来终觉浅，绝知此事要躬行”。
+                    </p>
+                    <p>
+                         我们表达了希望学弟学妹们“在学习中引领、
+                         在参与中创造、在行走中理解、在奉献中担当、在组织
+                         中凝聚、在集体中成长”的美好愿景；传递了郑州大学“求
+                         是、担当”的精神使命；传达了郑州大学“笃信仁厚、慎思勤勉”的优良校风。
+                    </p>
+                    <p>
+                         综上所述，我认为我们的这次返校宣讲活动的完成还
+                         是较为圆满的。同时也十分感谢学校能给我们这次社会
+                         实践的机会。我们会积极思考本次宣讲的遗漏和不足之
+                         处，我们也期待下一次的宣讲能够有进一步的完善。
+                    </p>
+                    <img src="img/v1.png">
+                    <h2><span class="h_decoration"></span> 青春漂流瓶</h2>
+                    <p class="no"> 瓶子里装着蓝天<br>
+                         回收一个瓶子，放飞一个心愿<br>
+                         只为守护我们共同的家园<br>
+                         只为与你悄然相见<br>
+                         写一份快乐与你<br>
+                         远隔山海享这一份共存<br>
+                         写一份幸福与你<br>
+                         站时光顶端逾越千年<br>
+                         愿送给亲爱的你<br>
+                         一份静水流深 沧笙踏歌<br>
+                         愿和你一起<br>
+                         弹一曲琵琶，奏一段年华<br>
+                         任风华化成一指流砂<br>
+                         微尘漂流瓶，守护家园守护ta</p>
+                         <img src="img/v2.jpg">
+                    <h2><span class="h_decoration"></span>节约无巨细，光盘来当先</h2>
+                    <p>袁老研究水稻半世纪，从根本上解决了中国人吃饭的难题，拯救无数人于饥饿之中。
+                         但随着我们生活水平的提高，越来越多的人把勤俭节约的观念抛之脑后，
+                         校园餐桌上的浪费也在日益增加。
+                         
+                         为大力弘扬中华民族勤俭节约的优良传统，树立节约光荣、
+                         浪费可耻的思想观念，使勤俭节约、反对浪费成为学生的行为习惯和生活方式，
+                         信息工程学院积极开展光盘行动。
+                         在这几天的活动中，在志愿者们积极宣传下，
+                         很多同学加入到光盘行动中，勤俭节约之风处处可见。
+                         但坏习惯不是一天养成的，也不可能一日改掉，浪费的现象还是不容乐观。
+                         
+                         “厉行勤俭节约，摒弃铺张浪费”任重而道远，
+                         需要我们从一粥一饭开始，从身边开始，积极倡导节约文化，
+                         广泛宣传节约理念，用我们的身体力行、
+                         用我们的引导感召更多的人加入光盘行动的队伍之中。</p>
+                         <img src="img/v3.jpg">
+                    
+               </article>
+          </main>
+          
+     </div>
+</body>
+<script>
+     const goBack = document.querySelector('#button-container');
+     goBack.onclick = () => {
+          window.location.href = "nav.html";
+     }
+</script>
+
+</html>

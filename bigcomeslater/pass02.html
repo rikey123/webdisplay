@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>以史为鉴</title>
+     <link rel="shortcut icon" href="favicon.ico" />
+     <style>
+          * {
+               margin: 0;
+               padding: 0;
+          }
+
+          body {
+               width: 100vw;
+               background-color: #fff;
+               display: flex;
+               flex-direction: column;
+               justify-content: center;
+               align-items: center;
+          }
+
+          h1 {
+               margin: 10px 0;
+          }
+
+          .p {
+               width: 80vw;
+               margin-top: 20px;
+               background-color: #fff;
+               font-size: 20px;
+               border: 1px solid rgb(58, 172, 204);
+               border-radius: 10px;
+          }
+
+          div img {
+               margin: 10px;
+               float: left;
+               width: 35vw;
+               margin-right: 20px;
+          }
+
+          h2 {
+               margin-top: 20px;
+               text-align: center;
+          }
+
+          p {
+               padding: 20px;
+               text-indent: 2em;
+          }
+
+          @import url("https://fonts.googleapis.com/css?family=Mukta:700");
+
+
+          #button-container {
+               position: fixed;
+               top: 10px;
+               left: 10px;
+               z-index: 99;
+               font-family: "Mukta", sans-serif;
+               font-size: 1rem;
+               line-height: 1.5;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               margin: 0;
+               background: transparent;
+          }
+
+
+          #button-container button {
+               position: relative;
+               display: inline-block;
+               cursor: pointer;
+               outline: none;
+               border: 0;
+               vertical-align: middle;
+               text-decoration: none;
+               background: transparent;
+               padding: 0;
+               font-size: inherit;
+               font-family: inherit;
+          }
+
+          #button-container button.learn-more {
+               width: 12rem;
+               height: auto;
+          }
+
+          #button-container button.learn-more .circle {
+               transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+               position: relative;
+               display: block;
+               margin: 0;
+               width: 3rem;
+               height: 3rem;
+               background: #282936;
+               border-radius: 1.625rem;
+          }
+
+          #button-container button.learn-more .circle .icon {
+               transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+               position: absolute;
+               top: 0;
+               bottom: 0;
+               margin: auto;
+               background: #fff;
+          }
+
+          #button-container button.learn-more .circle .icon.arrow {
+               transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+               left: 0.625rem;
+               width: 1.125rem;
+               height: 0.125rem;
+               background: none;
+          }
+
+          #button-container button.learn-more .circle .icon.arrow::before {
+               position: absolute;
+               content: "";
+               top: -0.25rem;
+               right: 0.0625rem;
+               width: 0.625rem;
+               height: 0.625rem;
+               border-top: 0.125rem solid #fff;
+               border-right: 0.125rem solid #fff;
+               transform: rotate(45deg);
+          }
+
+          #button-container button.learn-more .button-text {
+               transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+               position: absolute;
+               top: 0;
+               left: 0;
+               right: 0;
+               bottom: 0;
+               padding: 0.75rem 0;
+               margin: 0 0 0 1.85rem;
+               color: #282936;
+               font-weight: 700;
+               line-height: 1.6;
+               text-align: center;
+               text-transform: uppercase;
+          }
+
+          #button-container button:hover .circle {
+               width: 100%;
+          }
+
+          #button-container button:hover .circle .icon.arrow {
+               background: #fff;
+               transform: translate(1rem, 0);
+          }
+
+          #button-container button:hover .button-text {
+               color: #fff;
+          }
+     </style>
+</head>
+
+<body>
+     <div id="button-container">
+          <button class="learn-more" type="button">
+               <span class="circle" aria-hidden="true">
+                    <span class="icon arrow"></span>
+               </span>
+               <span class="button-text">Go Back</span>
+          </button>
+     </div>
+     <h1>过去</h1>
+     <div class="p">
+          <img src="img/pass021.jpg" alt="">
+          <h2>看现在</h2>
+          <p>
+               我们说过的话，做过的事，走过的路，遇过的人，每一个现在，都是我们以后的回忆。无须缅怀昨天，不必奢望明天，只要认真过好每个今天。说能说的话，做可做的事，走该走的路，见想见的人。
+          </p>
+     </div>
+     <div class="p">
+          <img src="img/pass022.jpg" alt="">
+          <h2>向未来</h2>
+          <p>
+               这个世界有很多个梦，每个梦里又都有一个世界。已然逝去的日光再璀璨再美好，也只不过一段回忆的长度；不久将至的夜色再凄楚再哀伤也只是模糊不确定的轮廓。在过去与未来的更迭里我们终老，行将就木。却终于发觉，原来黄昏才是时光最华美的绽放。
+          </p>
+     </div>
+</body>
+<script>
+     const goBack = document.querySelector('#button-container');
+     goBack.onclick = () => {
+          window.location.href = "nav.html";
+     }
+</script>
+
+</html>

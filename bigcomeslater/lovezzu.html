@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>I LOVE ZZU</title>
+     <link rel="shortcut icon" href="favicon.ico" />
+     <style>
+          @import url("https://fonts.googleapis.com/css2?family=Arbutus&family=Poppins:wght@300;500;900&display=swap");
+
+          * {
+               box-sizing: border-box;
+          }
+
+          body {
+               padding: 0;
+               margin: 0;
+               font-family: "Poppins", sans-serif;
+               font-weight: 300;
+               background-color: #f9f6efaa;
+          }
+
+          header {
+               width: 100vw;
+               position: relative;
+               min-height: 50vh;
+          }
+
+          header h1 {
+               position: absolute;
+               left: 50%;
+               top: 50%;
+               min-width: fit-content;
+               text-align: center;
+               margin: 0;
+               padding: 0;
+               transform: translate(-50%, -50%);
+               font-size: clamp(2rem, 10vw + 2rem, 5rem);
+               font-weight: 900;
+               color: #f2f2fa;
+               text-shadow: 0 0 0.1em #0009;
+               -webkit-box-reflect: below 0 linear-gradient(transparent, #fff3);
+               text-transform: uppercase;
+               mix-blend-mode: overlay;
+               line-height: 0.7;
+               border-bottom: 2px solid #0005;
+          }
+
+          header img {
+               display: none;
+               visibility: none;
+          }
+
+          header {
+               background-image: url(img/lovezzu1.jpg);
+               background-repeat: no-repeat;
+               background-size: cover;
+               background-position: 50%;
+          }
+
+          main {
+               padding: 1rem;
+               background-color: #f9f6ef;
+          }
+
+          article {
+               position: relative;
+          }
+
+          article img {
+               width: min(100%, 100% - 1rem);
+          }
+
+          article h2 {
+               font-weight: 500;
+               line-height: 1;
+               margin: 0;
+               padding: 2rem 0 0 0;
+               color: #5e918d;
+               text-align: center;
+          }
+          article p {
+               text-indent: 2em;
+          }
+          .last {
+               text-indent: 0;
+          }
+
+          @media only screen and (min-width: 100ch) {
+               main {
+                    width: 80ch;
+                    margin: 0 auto;
+               }
+          }
+
+          footer {
+               min-height: 10vh;
+               background-color: #1f2020;
+          }
+
+          @import url("https://fonts.googleapis.com/css?family=Mukta:700");
+
+
+          #button-container {
+               position: fixed;
+               top: 10px;
+               left: 10px;
+               z-index: 99;
+               font-family: "Mukta", sans-serif;
+               font-size: 1rem;
+               line-height: 1.5;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               margin: 0;
+               background: transparent;
+          }
+
+
+          #button-container button {
+               position: relative;
+               display: inline-block;
+               cursor: pointer;
+               outline: none;
+               border: 0;
+               vertical-align: middle;
+               text-decoration: none;
+               background: transparent;
+               padding: 0;
+               font-size: inherit;
+               font-family: inherit;
+          }
+
+          #button-container button.learn-more {
+               width: 12rem;
+               height: auto;
+          }
+
+          #button-container button.learn-more .circle {
+               transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+               position: relative;
+               display: block;
+               margin: 0;
+               width: 3rem;
+               height: 3rem;
+               background: #282936;
+               border-radius: 1.625rem;
+          }
+
+          #button-container button.learn-more .circle .icon {
+               transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+               position: absolute;
+               top: 0;
+               bottom: 0;
+               margin: auto;
+               background: #fff;
+          }
+
+          #button-container button.learn-more .circle .icon.arrow {
+               transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+               left: 0.625rem;
+               width: 1.125rem;
+               height: 0.125rem;
+               background: none;
+          }
+
+          #button-container button.learn-more .circle .icon.arrow::before {
+               position: absolute;
+               content: "";
+               top: -0.25rem;
+               right: 0.0625rem;
+               width: 0.625rem;
+               height: 0.625rem;
+               border-top: 0.125rem solid #fff;
+               border-right: 0.125rem solid #fff;
+               transform: rotate(45deg);
+          }
+
+          #button-container button.learn-more .button-text {
+               transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+               position: absolute;
+               top: 0;
+               left: 0;
+               right: 0;
+               bottom: 0;
+               padding: 0.75rem 0;
+               margin: 0 0 0 1.85rem;
+               color: #282936;
+               font-weight: 700;
+               line-height: 1.6;
+               text-align: center;
+               text-transform: uppercase;
+          }
+
+          #button-container button:hover .circle {
+               width: 100%;
+          }
+
+          #button-container button:hover .circle .icon.arrow {
+               background: #fff;
+               transform: translate(1rem, 0);
+          }
+
+          #button-container button:hover .button-text {
+               color: #fff;
+          }
+     </style>
+</head>
+
+<body>
+     <div id="button-container">
+          <button class="learn-more" type="button">
+               <span class="circle" aria-hidden="true">
+                    <span class="icon arrow"></span>
+               </span>
+               <span class="button-text">Go Back</span>
+          </button>
+     </div>
+     <div class="page-wrap">
+          <header class="page-header">
+               <h1>I Love ZZU</h1>
+               <img src="img/lovezzu1.jpg">
+          </header>
+          <main class="page-main">
+               <article>
+                    <h2>求是担当</h2>
+                    <p>造于斯，兴于斯，膺中原崛起之宏任，奏民族复兴之乐章，自是奋发踔厉，朝不逮露。
+                         背负青天，脚踏实地，笃信仁厚，慎思勤勉。行天健之德，做康庄之石，
+                         立成功于既有，争一流于在望。文理工医，日进月长，攻关修业，时闻折桂。
+                         杜甫忧民心，岳飞报国志，朝朝自勉励，风鹏正举时。
+                    </p>
+                    <img src="img/lovezzu2.jpg">
+
+                    <h2>承载梦想的地方</h2>
+                    <p>从郑大东门走进，一座巍峨壮观、清丽典雅的大楼映入眼帘。从平面图形上看，
+                         它就像是一本翻开的书，期待着莘莘学子来研究、来探索、来开发。它庄严地承载着
+                         郑大人的深切厚望，凝聚着郑大人对知识的满腔热情。你会被每个在这里汲取知识
+                         的学子而感动，他们遨游在书的世界中，眼睛中闪烁着对知识无限渴望的目光。图
+                         书馆里除了翻书声，几乎没有其他声音，这是一种深沉的静寂，令人震撼，也令人
+                         敬佩。一代又一代的郑大人就是在这里思考着、收获着、成长着……
+                    </p>
+                    <img src="img/lovezzu5.jpg">
+
+
+                    <h2>爱校园-------风光</h2>
+                    <p> 春风送暖，绿柳扶苏，又是一年春来到。迎春、玉兰、碧桃、樱花竞相开放，初春的郑
+                         大校园俨然成了一个花红柳绿、繁花似锦的美丽世界。春天是个万物复苏，生命觉醒
+                         的季节，沉寂了一年的花儿，终于等来了再次展现自我的时机，它们积蓄力量，争相
+                         开放，只待那百花争艳的景象。俗话说“一年之际在于春”，春天是一年的开始，更是
+                         充满希望的季节。泊月长廊的长椅上、眉湖边的小亭中，亦或樱花林的石凳上，都有
+                         学生三三两两安静温习的身影。刚刚历经了寒冬的梦想，开始在春天慢慢苏醒，伴着
+                         这样的和柔惬意的景色，向理想进发。
+                    </p>
+                    <img src="img/lovezzu4.jpg">
+
+
+
+                    <h2>爱生活，爱学习，爱自己，爱母校</h2>
+                    <p class="last"> 多去发现zzu的美景，拥有一双发现美的眼睛。<br>
+                         多去热爱生活，正是学习时。<br>
+                         多去做一些志愿，帮助他人做出贡献。<br>
+                         活在当下，把握当下！即现在的zzu大学生活！多做有意义的事！</p>
+                    <img src="img/lovezzu3.jpg">
+
+               </article>
+          </main>
+          <footer class="page-footer">
+
+          </footer>
+     </div>
+</body>
+<script>
+     const goBack = document.querySelector('#button-container');
+     goBack.onclick = () => {
+          window.location.href = "nav.html";
+     }
+</script>
+
+</html>

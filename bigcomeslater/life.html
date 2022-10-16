@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>校园生活</title>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&family=M+PLUS+1p&family=Permanent+Marker&display=swap"
+          rel="stylesheet">
+          <link rel="shortcut icon" href="favicon.ico" />
+     <style>
+          body {
+               background-color: rgba(0, 128, 128, 0.1);
+               margin: 0;
+          }
+
+          #page-header {
+               background-image: url('img/lifebig.jpg');
+               background-attachment: fixed;
+               background-position: center;
+               background-repeat: no-repeat;
+               background-size: cover;
+               height: 1000px;
+               width: 100%;
+               text-align: right;
+          }
+
+          #page-header h1 {
+               color: white;
+               padding: 35px 100px;
+               font-size: 125px;
+               margin-top: 0;
+               font-family: "Cabin Sketch", cursive;
+               height: 100%;
+          }
+
+          h2 {
+               font-family: "Cabin Sketch", cursive;
+               font-size: 40px;
+          }
+
+          p {
+               font-size: 20px;
+               font-family: "M PLUS 1p", sans-serif;
+          }
+
+          .thumbnail {
+               background-attachment: fixed;
+               background-repeat: no-repeat;
+               height: 600px;
+               width: 400px;
+               background-size: auto 600px;
+          }
+
+          #img1 {
+               background-image: url('img/life1.jpg');
+               margin-right: 25px;
+               background-position: right;
+               float: right;
+          }
+
+          #img2 {
+               background-image: url('img/life2.jpg');
+               margin-left: 25px;
+               background-position: left;
+               float: left;
+          }
+
+          #img3 {
+               background-image: url('img/life3.png');
+               margin-right: 25px;
+               background-position: right;
+               float: right;
+          }
+
+          #img4 {
+               background-image: url('img/life4.jpg');
+               margin-left: 25px;
+               background-position: left;
+               float: left;
+          }
+
+          .row {
+               margin-top: 25px;
+               margin-bottom: 15px;
+          }
+
+          #section1,
+          #section2,
+          #section3,
+          #section4 {
+               height: 600px;
+               width: 60%;
+               text-align: center;
+               padding: 25px;
+               overflow: auto;
+          }
+
+          #section1 {
+               float: left;
+               margin-left: 15%;
+          }
+
+          #section2 {
+               float: right;
+               margin-right: 15%;
+          }
+
+          #section3 {
+               float: left;
+               margin-bottom: 150px;
+               margin-left: 15%;
+          }
+
+          #section4 {
+               float: right;
+               margin-right: 15%;
+          }
+
+          @import url("https://fonts.googleapis.com/css?family=Mukta:700");
+
+
+          #button-container {
+               position: fixed;
+               top: 10px;
+               left: 10px;
+               z-index: 99;
+               font-family: "Mukta", sans-serif;
+               font-size: 1rem;
+               line-height: 1.5;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               margin: 0;
+               background: transparent;
+          }
+
+
+          #button-container button {
+               position: relative;
+               display: inline-block;
+               cursor: pointer;
+               outline: none;
+               border: 0;
+               vertical-align: middle;
+               text-decoration: none;
+               background: transparent;
+               padding: 0;
+               font-size: inherit;
+               font-family: inherit;
+          }
+
+          #button-container button.learn-more {
+               width: 12rem;
+               height: auto;
+          }
+
+          #button-container button.learn-more .circle {
+               transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+               position: relative;
+               display: block;
+               margin: 0;
+               width: 3rem;
+               height: 3rem;
+               background: #282936;
+               border-radius: 1.625rem;
+          }
+
+          #button-container button.learn-more .circle .icon {
+               transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+               position: absolute;
+               top: 0;
+               bottom: 0;
+               margin: auto;
+               background: #fff;
+          }
+
+          #button-container button.learn-more .circle .icon.arrow {
+               transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+               left: 0.625rem;
+               width: 1.125rem;
+               height: 0.125rem;
+               background: none;
+          }
+
+          #button-container button.learn-more .circle .icon.arrow::before {
+               position: absolute;
+               content: "";
+               top: -0.25rem;
+               right: 0.0625rem;
+               width: 0.625rem;
+               height: 0.625rem;
+               border-top: 0.125rem solid #fff;
+               border-right: 0.125rem solid #fff;
+               transform: rotate(45deg);
+          }
+
+          #button-container button.learn-more .button-text {
+               transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+               position: absolute;
+               top: 0;
+               left: 0;
+               right: 0;
+               bottom: 0;
+               padding: 0.75rem 0;
+               margin: 0 0 0 1.85rem;
+               color: #282936;
+               font-weight: 700;
+               line-height: 1.6;
+               text-align: center;
+               text-transform: uppercase;
+          }
+
+          #button-container button:hover .circle {
+               width: 100%;
+          }
+
+          #button-container button:hover .circle .icon.arrow {
+               background: #fff;
+               transform: translate(1rem, 0);
+          }
+
+          #button-container button:hover .button-text {
+               color: #fff;
+          }
+     </style>
+</head>
+
+<body>
+
+     <body>
+          <div id="button-container">
+               <button class="learn-more" type="button">
+                    <span class="circle" aria-hidden="true">
+                         <span class="icon arrow"></span>
+                    </span>
+                    <span class="button-text">Go Back</span>
+               </button>
+          </div>
+          <div class="page-wrap">
+               <header class="bgimg" id="page-header">
+                    <h1>Life In ZZU</h1>
+               </header>
+               <main class="page-main">
+                    <article>
+                         <div class="row" id="row-1">
+                              <div id="section1">
+                                   <h2>校园之夜</h2>
+                                   <p>我向往无拘无束的生活，我渴望做自己想要做的一切，我希望我的思绪能无边无际的“闯荡”，
+                                        我期待我的身体能在广阔的空间里自由的翱翔, 然而在这大学里，
+                                        我就可以实现我青春的梦想!我的大学，我做主！我的青春，我感受！
+                                        在青春中舞动的大学就应该我自己做主，热爱自己的热爱，快乐自己的快乐，
+                                        听从自己的内心。在这个让人嫉妒又羡慕的青春里，没有期待中的那份惊喜，
+                                        没有童话中可以让灰姑娘变成公主的水晶鞋，没有那可以接受无数鲜花与掌声的舞台。</p>
+                                   <p>我们平凡如旧，我们有的，只是那颗火焰般热情洋溢的心。不是不想活得潇洒自在，
+                                        不是不想叛逆、放任，不是不想不顾一切疯狂地追寻，只是在梦想与现实交锋的那一瞬间，
+                                        我看到了它们的差距，我明白了我还没有取得那通向自由的通行证，于是，我选择了现实，
+                                        选择在这个大学里面绽放自己，毕竟我更趋向于现实的温暖。而那绚烂的梦想也会永不凋谢，
+                                        永远珍藏在我们的回忆里，那是一个属于洒脱青春的梦。 </p>
+                              </div>
+                              <div class="thumbnail" id="img1"></div>
+                         </div>
+                         <div class="row">
+                              <div id="section2">
+                                   <h2>校园美食</h2>
+                                   <p>
+                                        春，是翠竹街旁一段海棠花开的甜点<br>
+                                        夏，是迎春街道的炒酸奶与凉爽初现<br>
+                                        秋，厚德大道上黄叶飞舞再见广芳园<br>
+                                        冬，路过松园北面是百果承诺的相见<br>
+                                   </p>
+                                   <p>
+                                        好像匆匆路过绮丽景色，我们本是他乡之客，来去匆匆山路一程，
+                                        彼此因食结下的缘分，在胡吃海喝停留、旋转直至沸腾。
+                                        有幸加入暗自窃喜，这里不只是一个聚集地，更是一个生命体，
+                                        有在跃动着的心，热烈、自由、欢愉。
+                                        我可以倾听食物的呓语，将它们变成文字、诗集，
+                                        把不同的心情偷偷藏起，塞进与食物的际遇。感谢这里让我停留、沉浸，
+                                        让我诉说秘密、维持情谊。
+                                        我想，纵使我们前路渺无边际，也记得曾经相互偎依，
+                                        相互路过、慰藉伤痕，也记得祝愿彼此芬芳瑰丽一生。
+                                   </p>
+                              </div>
+                              <div class="thumbnail" id="img2"></div>
+                         </div>
+                         <div class="row">
+                              <div id="section3">
+                                   <h2>校园之书</h2>
+                                   <p>
+                                        我们踱步人世，披荆斩棘，风吹雨打，心灵长期备受煎熬，
+                                        但只要踏入文学的殿堂，天使就会净化你的心灵，为你洗去尘世的浮土，
+                                        为你带来经历战火的洗礼，心灵的扣责，当你在从图书馆中走出，
+                                        你面临的将是光芒万丈的人生！正所谓是一歌一梦一本书，一笔一墨一生情。
+                                   </p>
+                                   <p>
+                                        图书馆外岁月匆匆，图书馆里却是时间骤停，<br>
+                                        一个他停留在战火纷飞的三国时代，一个她停留在轻快美丽的先秦时代，<br>
+                                        一个她停留在越女浣纱的吴越水中，一个他停留在八王之乱的血腥风雨中；<br>
+                                        一个他停留在奥林匹斯诸神闪耀的时代，<br>
+                                        一个她停留在拉美西斯二世统治下繁荣而神奇的土地，<br>
+                                        一个他跟着道尔与福尔摩斯一同破案，<br>
+                                        一个她跟着郝思嘉体会人生的酸甜苦辣……正所谓是图书馆里，人生几何！<br>
+                                   </p>
+                              </div>
+                              <div class="thumbnail" id="img3"></div>
+                         </div>
+                         <div class="row" id="row-4">
+                              <div id="section4">
+                                   <h2>校园青春</h2>
+                                   <p>
+                                        大学，被冠以青春的名号；<br>
+                                        青春，被打上活力的标签；<br>
+                                        活力，被绽放在各个社团之中。<br>
+                                        社团是属于充满活力的、是绽放青春的舞台。<br>
+                                        百团大战，百花齐放<br>
+                                        欢声笑语，是思想的碰撞；<br>
+                                        携手并进，是青春的成长。<br>
+                                        社团是每一位懵懂青年放飞青春的第一片绿地，<br>
+                                        在这里，充斥着青春的气息。
+                                   </p>
+
+                              </div>
+                              <div class="thumbnail" id="img4"></div>
+                         </div>
+                    </article>
+               </main>
+          </div>
+     </body>
+     <footer class="page-footer">
+
+     </footer>
+</body>
+<script>
+     const goBack = document.querySelector('#button-container');
+     goBack.onclick = () => {
+          window.location.href = "nav.html";
+     }
+</script>
+
+</html>

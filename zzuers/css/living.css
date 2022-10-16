@@ -1,0 +1,189 @@
+html,
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: #e2e2e2;
+}
+
+body a {
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+
+.putting {
+    background: url(../images/a0.jpg) no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    min-height: 308px;
+    text-align: center;
+}
+
+.putting h1 {
+    color: #ffffff;
+    font-size: 4em;
+    padding: 0.5em 0;
+    margin: 0;
+    line-height: 1em;
+}
+
+.putting h4 {
+    color: #ffffff;
+    font-size: 2em;
+    padding: 1em 0;
+    margin: 0;
+    line-height: 1.5em;
+}
+
+.editing p {
+    color: #000;
+    font-size: 1.3em;
+    line-height: 2em;
+    margin: 0em 0;
+    font-weight: 400;
+}
+
+.think-top h4 {
+    color: #000;
+    font-size: 2.5em;
+    text-align: center;
+    font-weight: 700;
+    margin: 0;
+    padding: 1.5em 0;
+}
+
+.think-top {
+    background: #fff;
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 50%;
+    height: 160px;
+    border: 8px solid #f0f0f0;
+}
+
+.editing-left {
+    background: #e2e2e2;
+    padding: 2em 2em;
+}
+
+.editing {
+    background: #b1b1b1;
+    padding: 0em 0;
+}
+
+.think-bottom {
+    margin: 10em 0 0;
+}
+
+.think-bottom2 {
+    margin: 20em 0 0;
+}
+
+.editing-top h3 {
+    font-size: 2em;
+    color: #000;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.ima-left.img {
+    width: 10px;
+    height: 10px;
+
+}
+
+i.paint {
+    width: 96px;
+    height: 96px;
+    background: url(../images/img-sprite.png) no-repeat -15px -7px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+i.cam {
+    width: 96px;
+    height: 96px;
+    background: url(../images/img-sprite.png) no-repeat -138px -7px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+i.stamp {
+    width: 96px;
+    height: 96px;
+    background: url(../images/img-sprite.png) no-repeat -394px -10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+i.musc {
+    width: 96px;
+    height: 96px;
+    background: url(../images/img-sprite.png) no-repeat -265px -12px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.ima-left {
+    float: left;
+    width: 18%;
+}
+
+.ima-right {
+    float: left;
+    width: 82%;
+}
+
+.ima-left img {
+    width: 300px;
+    height: 150px;
+    margin: 0em 0em 0em 5em;
+
+}
+
+.ima {
+    background: #dcdcdc;
+    padding: 2em 4em;
+}
+
+.editing-right {
+    padding: 0;
+}
+
+.pho {
+    background: #e9e9e9;
+    padding: 2em 4em;
+    text-align: right;
+}
+
+.hear {
+    background: #f4f4f4;
+    padding: 2em 4em;
+}
+
+.make {
+    background: #ffffff;
+    padding: 2em 4em;
+    text-align: right;
+}
+
+.editing-right {
+    padding: 5em 0;
+}
+
+.editing-left {
+    background: #e2e2e2;
+    padding: 8em 2em 3em;
+}
+
+.container1 {
+    margin: 0 25em 0em 0em;
+}
+
+.container2 {
+    margin: 0 0em 0em 25em;
+}

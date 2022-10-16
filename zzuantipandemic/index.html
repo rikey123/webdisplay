@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<title>郑州大学防疫专题网站</title>
+<link href="css/animate.min.css" rel="stylesheet" type="text/css" />
+<link href="css/aos.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.--><script>var __adobewebfontsappname__="dreamweaver"</script><script src="http://use.edgefonts.net/mr-bedfort:n4:default;allan:n7:default.js" type="text/javascript"></script>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/unslider.min.js"></script>
+<script src="js/useanimation.js"></script>
+<script src="js/particle.js"></script>
+<script src="js/xs.js"></script>
+<script src="js/jquery.sticky.js"></script>
+<script src="js/aos.js"></script>
+	<script src="js/scroll.js"></script>
+<link rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" href="css/honver.css">
+<!--轮播2-->
+	<link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/index.css"/>   
+	<script src="js/jquery-ui-1.8.6.core.widget.js"></script>
+    <script src="js/jqueryui.bannerize.js"></script>
+	<script src="js/jquery.scrollify.min.js"></script>
+<!--	以上为导入各种模块-->
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#banners').bannerize({
+                shuffle: 1,
+                interval: "5"
+            });
+            $(".ui-line").hover(function(){
+                $(this).addClass("ui-line-hover");
+                $(this).find(".ui-bnnerp").addClass("ui-bnnerp-hover");
+            },function(){
+                $(this).removeClass("ui-line-hover");
+                $(this).find(".ui-bnnerp").removeClass("ui-bnnerp-hover");
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="stars"></div>  <!--背景层，不要删除，不然没有作用-->
+<script>
+$(document).ready(function(){
+  var stars=800;  /*星星的密集程度，数字越大越多*/
+  var $stars=$(".stars");
+  var r=800;   /*星星的看起来的距离,值越大越远,可自行调制到自己满意的样子*/
+  for(var i=0;i<stars;i++){
+    var $star=$("<div/>").addClass("star");
+    $stars.append($star);
+  }
+  $(".star").each(function(){
+    var cur=$(this);
+    var s=0.2+(Math.random()*1);
+    var curR=r+(Math.random()*300);
+    cur.css({ 
+      transformOrigin:"0 0 "+curR+"px",
+      transform:" translate3d(0,0,-"+curR+"px) rotateY("+(Math.random()*360)+"deg) rotateX("+(Math.random()*-50)+"deg) scale("+s+","+s+")"
+       
+    })
+  })
+})
+</script>
+<!--以上为星空背景初始化脚本-->
+<div class="topz mg2" id="menu">
+	<div class="top mg">
+		<div class="topl f"><a href=""><img id="title1" align="absmiddle" src="images/title.png" /></a></div>
+		<div class="topr r xi24 bai" id="box">
+			<ul>
+				<li><a href="index.html">首页</a></li>
+				<li><a href="gyyq.html">关于疫情</a></li>
+				<li><a href="kyyx.html">抗疫英雄</a></li>
+				<li><a href="wyzp.html">文艺作品</a></li>
+				<li><a href="ssdt.html">实时动态</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!--<div class="banner1 mg2"></div>-->
+<div class="banner" id="b04">
+    <ul class="slide">
+
+        <li><img class="sliderimg" src="images/slide5.png" alt="" width="100%" ></li>
+
+        <li class="slide"><img class="sliderimg" src="images/slide1.png" alt="" width="100%" ></li>
+
+        <li class="slide"><img class="sliderimg" src="images/slide3.png" alt="" width="100%" ></li>
+
+        <li class="slide"><img class="sliderimg" src="images/slide4.png" alt="" width="100%" ></li>
+
+        <li class="slide"><img class="sliderimg" src="images/slide2.png" alt="" width="100%" ></li>
+
+    </ul>
+
+    <a href="javascript:void(0);" class="unslider-arrow04 prev"><img class="arrow" id="al" src="images/arrowl.png" alt="prev" width="20" height="35"></a>
+
+    <a href="javascript:void(0);" class="unslider-arrow04 next"><img class="arrow" id="ar" src="images/arrowr.png" alt="next" width="20" height="37"></a>
+
+</div>
+<script>
+
+function imgReload()
+
+{
+
+	var imgHeight = 0;
+
+	var wtmp = $("body").width();
+
+	$("#b04 ul li").each(function(){
+
+        $(this).css({width:wtmp + "px"});
+
+    });
+
+	$(".sliderimg").each(function(){
+
+		$(this).css({width:(wtmp + "px")*0.8});
+
+		imgHeight = $(this).height();
+
+	});
+
+}
+
+
+
+$(window).resize(function(){imgReload();});
+
+
+
+$(document).ready(function(e) {
+
+	imgReload();
+
+    var unslider06 = $('#b04').unslider({
+
+		dots: true,
+
+		fluid: true
+
+	}),
+
+	data06 = unslider06.data('unslider');
+
+	
+
+	$('.unslider-arrow04').click(function() {
+
+        var fn = this.className.split(' ')[1];
+
+        data06[fn]();
+
+    });
+
+});
+</script>
+<!--以上为轮播图初始化设置-->
+<div class="con mg" id="conmdbox">
+	<div  class="outbox" id="ouutbox1" aos="fade-zoom-in"><div class="conl f bai xi18 tm">中央部署</div>
+		<div class="line"></div>
+		<div class="innertext"><ul>
+		<li><a href="article/nation/nation1.html"><span class="articletext">10句话读懂总书记疫情防控科学部署</span><span class="r xi16"><p class="time">2022年04月07日</p></span></a></li>
+		<li><a href="article/nation/nation2.html"><span class="articletext">关于疫情防控?中央作出这些重要部署</span><span class="r xi16"><p class="time">2021年04月17日</p></span></a></li>
+		<li><a href="article/nation/nation3.html"><span class="articletext">部署从严抓好疫情防控工作 中共中央总书记习近平主持会议</span><span class="r xi16"><p class="time">2022年03月17日</p></span></a></li>
+		<li><a href="article/nation/nation4.html"><span class="articletext">习近平：要始终坚持人民至上、生命至上，坚持科学精准、动态清零</span><span class="r xi16"><p class="time">2022年03月19日</p></span></a></li>
+		<li><a href="article/nation/nation5.html"><span class="articletext">盘点：为抵御疫情，中央及各地方出台的惠民政策</span><span class="r xi16"><p class="time">2022年02月17日</p></span></a></li>
+		<li><a href="article/nation/nation6.html"><span class="articletext">习近平指示：控疫压倒一切 中央全力援港</span><span class="r xi16"><p class="time">2022年02月17日</p></span></a></li>
+		</ul></div></div>
+	<div class="conl f bai xi18 tm block"></div>
+	<div class="outbox" aos="fade-zoom-in"><div class="conl f bai xi18 tm">省部动态</div>
+		<div class="line"></div><div class="innertext"><ul>
+		<li><a href="article/province/province news1.html"><span class="articletext">志愿服务关爱行动 | 河南省援助吉林抗疫志愿服务关爱行动掠影</span><span class="r xi16"><p class="time">2022年04月04日</p></span></a></li>
+		<li><a href="article/province/province news2.html"><span class="articletext">河南公安：战疫路上，与爱同行！</span><span class="r xi16"><p class="time">2022年04月02日</p></span></a></li>
+		<li><a href="article/province/province news3.html"><span class="articletext">同心抗疫:河南省疾控中心重要提醒</span><span class="r xi16"><p class="time">2022年04月02日</p></span></a></li>
+		<li><a href="article/province/province news4.html"><span class="articletext">河南：抗疫不分国界，检测现场一名特殊的志愿者，让大家称赞不已</span><span class="r xi16"><p class="time">2022年03月29日</p></span></a></li>
+		<li><a href="article/province/province news5.html"><span class="articletext">抗疫路上温暖相伴 焦作市教育系统“硬核”抗疫</span><span class="r xi16"><p class="time">2022年03月31日</p></span></a></li>
+		<li><a href="article/province/province news6.html"><span class="articletext">漯河捐赠40万元物资，助力吉林抗疫</span><span class="r xi16"><p class="time">2022年02月22日</p></span></a></li>
+		</ul></div></div>
+	<div class="conl f bai xi18 tm block"></div>
+	<div class="outbox" aos="fade-zoom-in"><div class="conl f bai xi18 tm">校园新闻</div>
+		<div class="line"></div><div class="innertext"><ul>
+		<li><a href="article/school/school1.html"><span class="articletext">同心抗疫、共克时艰：筑牢疫情防线，共赢抗疫“春天”</span><p class="time">2022年04月07日</p></a></li>
+		<li><a href="article/school/school2.html"><span class="articletext">同心战疫、共克时艰：聚“材”战“疫”静享春光</span><span class="r xi16"><p class="time">2022年04月06日</p></span></a></li>
+		<li><a href="article/school/school3.html"><span class="articletext">同心抗疫，共克时艰: 物理学院疫情防控工作纪实</span><span class="r xi16"><p class="time">2022年04月05日</p></span></a></li>
+		<li><a href="article/school/school4.html"><span class="articletext">郑州大学：同心抗疫 共待春晖</span><span class="r xi16"><p class="time">2022年04月03日</p></span></a></li>
+		<li><a href="article/school/school5.html"><span class="articletext">同心抗疫、共克时艰：防疫抗疫 郑大青年在行动</span><span class="r xi16"><p class="time">2022年03月30日</p></span></a></li>
+		<li><a href="article/school/school6.html"><span class="articletext">郑大故事：有一种爱，叫与你并肩作战</span><span class="r xi16"><p class="time">2022年02月28日</p></span></a></li>
+		</ul></div></div>	
+</div>
+<div class="con mg down" aos="fade-zoom-in">
+	<div class="line down" id="leftline" aos="fade-left"></div>
+	<span class="conl f bai xi18 tm">工作进展</span>
+	<div class="line down" id="rightline" aos="fade-right"></div>
+<!--	<div class="slide3">-->
+		<div class="warrper">
+
+       <!--content-->
+       <div class="content">
+           <!--企业动态-->
+           <div class="index-new w1200 mt30">
+               <div class="indexadd mt50 mb60">
+                   <div id="banners" class="ui-banner">
+                       <ul class="ui-banner-slides">
+                           <li><a href=""><img src="article/work/work/work1.jpg"/></a></li>
+                           <li><a href=""><img src="article/work/work (2)/work2.png"/></a></li>
+                           <li><a href=""><img src="article/work/work (3)/work3.jpg"/></a></li>
+                           <li><a href=""><img src="article/work/work (4)/work4.jpg"/></a></li>
+                           <li><a href=""><img src="article/work/work (5)/work5.jpg"/></a></li>
+                           <li><a href=""><img src="article/work/work (6)/work6.jpg"/></a></li>
+                           
+                       </ul><!--ui-banner-slides end-->
+                       <ul class="ui-banner-slogans">
+                           <li class="ui-line">
+                               <div class="ullinehover">
+                                   <div class="ui-bnnerimg floatLeft">
+                                       <img src="article/work/work/work1.jpg" alt="" width="103"/>
+                                   </div>
+                                   <div class="ui-bnnerp floatRight">
+                                       <h3 style="margin-top: 8px;">4月10日上海市疫情防控新闻发布会</h3>
+                                       <p>实施分区分级差异化防控，依据风险程度的大小，按照封控区、管控区、防范区“三区划分”原则，进行阶梯式管理。
+                                       </p>
+                                   </div>
+                               </div>
+                           </li>
+                           <li class="ui-line">
+                               <div class="ullinehover">
+                                   <div class="ui-bnnerimg floatLeft">
+                                       <img src="article/work/work (2)/work2.png" alt="" width="103"/>
+                                   </div>
+                                   <div class="ui-bnnerp floatRight">
+                                       <h3 style="margin-top: 8px;">终南山新研判</h3>
+                                       <p>终南山提出“PROTECT”一体化策略，并提出防空的关键问题是“新冠肺炎的关键问题就是要最大限度降低传播和病死率”。
+                                       </p>
+                                   </div>
+                               </div>
+                           </li>
+                           <li class="ui-line">
+                               <div class="ullinehover">
+                                   <div class="ui-bnnerimg floatLeft">
+                                       <img src="article/work/work (3)/work3.jpg" alt="" width="103"/>
+                                   </div>
+                                   <div class="ui-bnnerp floatRight">
+                                       <h3 style="margin-top: 8px;">4月9日三亚市疫情防控新闻发布会</h3>
+                                       <p>介绍疫情状况与下一步工作方向，并针对化的做防控措施，严格落实”三区“管理。
+                                       </p>
+                                   </div>
+                               </div>
+                           </li>
+                           <li class="ui-line">
+                               <div class="ullinehover">
+                                   <div class="ui-bnnerimg floatLeft">
+                                       <img src="article/work/work (4)/work4.jpg" alt="" width="103"/>
+                                   </div>
+                                   <div class="ui-bnnerp floatRight">
+                                       <h3 style="margin-top: 8px;">新一批中央援港防控专家赴港开展工作</h3>
+                                       <p>新一批中央援港防控专家7日下午经深圳湾口岸赴香港，全力配合特区政府开展疫情防控工作，重点开展流行病学调查分析和疫情研判，并有针对性提出下一步的精准防控措施。
+                                       </p>
+                                   </div>
+                               </div>
+                           </li>
+                           <li class="ui-line">
+                               <div class="ullinehover">
+                                   <div class="ui-bnnerimg floatLeft">
+                                       <img src="article/work/work (5)/work5.jpg" alt="" width="103"/>
+                                   </div>
+                                   <div class="ui-bnnerp floatRight">
+                                       <h3 style="margin-top: 8px;">4月6日国务院联防联控机制新闻发布会</h3>
+                                       <p>关于奥密克戎病毒的研究有了最新进展。有了进一步的针对措施。
+                                       </p>
+                                   </div>
+                               </div>
+                           </li>
+                           <li class="ui-line">
+                               <div class="ullinehover">
+                                   <div class="ui-bnnerimg floatLeft">
+                                       <img src="article/work/work (6)/work6.jpg" alt="" width="103"/>
+                                   </div>
+                                   <div class="ui-bnnerp floatRight">
+                                       <h3 style="margin-top: 8px;">充实医疗力量  携手抗击疫情</h3>
+                                       <p>随着海南省援沪医疗队近百名医护人员的进驻，上海嘉定南翔方舱医院正式投入运行。医护人员在入舱前加油鼓劲。
+                                       </p>
+                                   </div>
+                               </div>
+                           </li>
+                           
+                       </ul>
+                   </div>
+               </div>
+           </div>
+       </div>
+       <!--以上为工作进展模块-->
+
+
+   </div>
+	</div>
+	<div class="concern">
+	<div class="concernbox" aos="fade-zoom-in"><span class="concerntext">情系疫区</span></div>
+	<div class="container" aos="fade-zoom-in">
+		<div class="scroll">
+			<ul>
+				<li><img src="./images/heart/heart.jpg" alt=""></li>
+				<li><img src="./images/heart/heart2.jpg" alt=""></li>
+				<li><img src="./images/heart/heart3.jpg" alt=""></li>
+				<li><img src="./images/heart/heart4.jpg" alt=""></li>
+				<li><img src="./images/heart/heart5.jpg" alt=""></li>
+				<li><img src="./images/heart/heart6.jpg" alt=""></li>
+			</ul>
+		</div>
+	</div>
+	<script src="js/scroll.js"></script>
+	<script type="text/javascript">
+		$(function () {
+			$('.scroll').scroll({
+				speed: 40, //数值越大，速度越快
+				direction: 'horizantal'
+			});
+		});
+	</script>
+	</div>
+<!--	以上为情系疫区滚动脚本-->
+	<div class="wyzp1 mg xi40 cen hong" id="moretext" aos="fade-in">疫情回顾</div>
+	<div id="swiper-history" aos="fade-zoom-in">
+		<div class="swiper-container">
+		<div class="swiper-pagination">
+		  </div>
+		<div class="swiper-wrapper">
+		  </div>
+		<div class="short-line">
+		  </div>
+		<div class="long-line">
+		  </div>
+	</div>
+		<div class="swiper-button-prev">
+	</div>
+		<div class="swiper-button-next">
+	</div>
+	</div>
+<!--时间轴html-->
+<div class="wyzp1 mg xi40 cen hong" id="moretext" aos="fade-in">更多</div>
+	<div class="more" aos="flip-up">
+		<div class="project-list">
+			<div class="project">
+				<div class="project__card">
+					<a href="gyyq.html" class="project__image"><img src="images/more/gyyq.jpeg" width=300 height=300 alt=""></a>
+					<div class="project__detail">
+						<h2 class="project__title"><a href="gyyq.html">关于疫情</a></h2>
+						<small class="project__category"><a href="gyyq.html">Photography</a></small>
+					</div>
+				</div>
+			</div>
+			<div class="project">
+				<div class="project__card">
+					<a href="kyyx.html" class="project__image"><img src="images/more/kyyx.jpeg" width=300 height=300 alt=""></a>
+					<div class="project__detail">
+						<h2 class="project__title"><a href="kyyx.html">抗疫英雄</a></h2>
+						<small class="project__category"><a href="kyyx.html">Photography</a></small>
+					</div>
+				</div>
+			</div>
+			<div class="project">
+				<div class="project__card">
+					<a href="wyzp.html" class="project__image"><img src="images/more/kyzp.jpeg" width=300 height=300 alt=""></a>
+					<div class="project__detail">
+						<h2 class="project__title"><a href="wyzp.html">文艺作品</a></h2>
+						<small class="project__category"><a href="wyzp.html">Photography</a></small>
+					</div>
+				</div>
+			</div>
+			<div class="project">
+				<div class="project__card">
+					<a href="ssdt.html" class="project__image"><img src="images/more/ssdt.png" width=300 height=300 alt=""></a>
+					<div class="project__detail">
+						<h2 class="project__title"><a href="ssdt.html">实时动态</a></h2>
+						<small class="project__category"><a href="ssdt.html">Photography</a></small>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!--	以上为更多模块-->
+	<!-- 引入时间轴js --> 
+<script src="js/swiper.min.js"></script> 
+
+<!-- 初始化时间轴 --> 
+<script>
+ var modifier=2;//每天的px
+ var historyList=[{"detail":"一种被称为“电子烟病”的疾病突然在美国出现了大幅增长。而这个所谓的电子烟病的症状跟新冠病毒肺炎一模一样。","date":"2019-06-1"},
+                  {"detail":"美国流感大爆发。","date":"2019-10-01"},
+				  {"detail":"第七届世界军人运动会于2019年10月18日至27日在中国武汉举行，来自109个国家的9308名军人报名参加。","date":"2019-10-18"},
+				  {"detail":"武汉金银潭医院收治首例疑似病例。国际医学期刊《柳叶刀》研究显示，首例新型冠状病毒肺炎确诊患者于此日发病","date":"2019-12-01"},
+                  {"detail":"武汉卫健委官方通报中的最早发病日期。","date":"2019-12-08"},
+				  {"detail":"武汉海鲜市场关闭。","date":"2020-01-01"},
+				  {"detail":"1月3日，武汉市卫健委发布关于不明原因的病毒性肺炎情况通报:武汉共发现不明原因肺炎患者44例，其中重症11例。","date":"2020-01-03"},
+				  {"detail":"1月10日，一年一度的“人口大迁徙”——春运正式拉开大幕。","date":"2020-01-10"},
+				  {"detail":"1月11日，出现第一名死亡病例，此时包括医务人员在内的739名密切接触者尚未出现病症。","date":"2020-01-11"},
+				  {"detail":"1月20日，钟南山院士说:武汉疫情存在人传人现象。此时确定人传人的特性。武汉市成立疫情防控指挥部。","date":"2020-01-20"},
+				  {"detail":"腊月29，武汉封城。","date":"2020-01-23"},
+				  {"detail":"西藏启动重大突发公共卫生事件一级响应，截止当时，全国31个省、市全部启动重大突发公共卫生事件一级响应。","date":"2020-01-29"},
+				  {"detail":"世界卫生组织宣布，将新型冠状病毒疫情列为国际关注的突发公共卫生事件。","date":"2020-01-30"},
+				  {"detail":"武汉火神山医院正式交付，共设床位1000张。从1月24日火神山医院设计方案完成，到2月2日交付，全程仅用10天","date":"2020-02-02"},
+				  {"detail":"武汉雷神山医院交付使用（1月26日起设计及施工），全院共设床位1600张，集中收治新型冠状病毒肺炎患者。","date":"2020-02-08"},
+				  {"detail":"世界卫生组织总干事谭德塞在瑞士日内瓦宣布，将新型冠状病毒感染的肺炎命名为“COVID-19”","date":"2020-02-11"},
+				  {"detail":"全球新冠肺炎确诊病例突破100万例，意味着本轮新冠肺炎疫情已经成为当代全球最大规模的公共卫生危机。","date":"2020-04-03"},
+				  ];	
+
+    var mySwiper = new Swiper('#swiper-history .swiper-container',{
+		virtualTranslate : true,
+		preventClicks : false,
+prevButton:'#swiper-history .swiper-button-prev',
+nextButton:'#swiper-history .swiper-button-next',
+pagination:'#swiper-history .swiper-pagination',
+paginationClickable:true,
+paginationBulletRender: function (swiper, index, className) {
+	if(index>0){
+	day1 = new Date(historyList[index]['date'].replace(/-/g, "/"));
+	day2 = new Date(historyList[index-1]['date'].replace(/-/g, "/"));
+	time=day1-day2
+	marginLeft=parseInt( time/ (1000 * 60 * 60 * 24))*modifier;
+	}else{
+		marginLeft=0
+	}
+
+      return '<span class="' + className + '" style="margin-left:'+marginLeft+'px;"></span>';
+  },
+
+  onInit: function(swiper){
+	  mySlides='';
+	  for(var i = 0;i<historyList.length;i++){
+		swiper.appendSlide('<div class="swiper-slide slide'+i+'"><span class="detail">'+historyList[i]['detail']+'</span><span class="date">'+historyList[i]['date']+'</span></div>');
+		swiper.slides[i].style.transform='translate3d(' + (-i)*swiper.width + 'px, 0px, 0px)';
+	  }
+	swiper.slideTo(3);  
+  },
+  onSlideChangeStart: function(swiper){
+	  detailPrev=swiper.slides[swiper.previousIndex].querySelector('.detail');
+	  datePrev=swiper.slides[swiper.previousIndex].querySelector('.date');
+	  detailPrev.offsetHeight;datePrev.offsetHeight;
+	  swiper.slides[swiper.previousIndex].style.zIndex=1;
+	  detailPrev.style.opacity=datePrev.style.opacity=0;
+	  detailPrev.style.transform=datePrev.style.transform='translate3d(0px, 0px, 0px)';
+	  
+      detailActive=swiper.slides[swiper.activeIndex].querySelector('.detail');
+	  dateActive=swiper.slides[swiper.activeIndex].querySelector('.date')
+	  detailActive.offsetHeight;dateActive.offsetHeight;
+	  swiper.slides[swiper.activeIndex].style.zIndex=999;
+	  detailActive.style.opacity=dateActive.style.opacity=1;
+	  detailActive.style.transform='translate3d(0px, 10px, 0px)';
+	  dateActive.style.transform='translate3d(0px, -10px, 0px)';
+	  
+	moveDay1 = new Date(historyList[swiper.activeIndex]['date'].replace(/-/g, "/"));
+	moveDay2 = new Date(historyList[0]['date'].replace(/-/g, "/"));
+	moveTime=moveDay1-moveDay2
+	moveDistance=parseInt( moveTime/ (1000 * 60 * 60 * 24))*modifier+10*swiper.activeIndex;
+	move=swiper.width/2-5-moveDistance;
+	
+	  swiper.paginationContainer[0].style.left=move+'px';
+	  
+    },
+		});
+    </script>
+<!--以上为时间轴脚本-->
+<div class="foot mg2 bai cen xi14">版权所有©：疫战到底团队 all right reserved</div>
+
+	<script>
+	$("#conmdbox").xs999(6);
+	$(".concernbox").xs999(4);
+	$("#menu").xs999(1);
+</script>
+<script type="text/javascript" src="/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="smohan.fixednav.js"></script>
+<script>
+AOS.init({
+  offset: 200,
+  duration: 600,
+  easing: 'ease-in-sine',
+  delay: 100,
+});
+</script>
+<!--aos动画库初始化-->
+<script src="js/jquery.hover3d.js" ></script>
+	<script>
+		$(document).ready(function(){
+			$(".project").hover3d({
+				selector: ".project__card",
+				shine: true,
+			});
+
+			$(".movie").hover3d({
+				selector: ".movie__card",
+				shine: true,
+				sensitivity: 20,
+			});
+		});
+
+	</script>
+<!--3d效果方框初始化-->
+
+</body>
+</html>
